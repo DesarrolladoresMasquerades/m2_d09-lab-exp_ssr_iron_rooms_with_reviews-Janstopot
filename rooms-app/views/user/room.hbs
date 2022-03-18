@@ -1,0 +1,24 @@
+<div id="form">
+  <h2>Create room</h2>
+
+  <form action="/rooms/room" method="POST">
+
+    <label> Name
+      <input type="text" name="name" placeholder="Name of the room" />
+    </label>
+
+    <label>Description
+      <input type="text" name="description" placeholder="Room description" />
+    </label>
+
+    <label>Image
+      <input type="text" name="imageUrl" placeholder="Image URL" />
+    </label>
+
+    <button type="submit">Create room</button>
+
+    {{#if errorMessage}}
+      <p class="error">{{errorMessage}}</p>
+    {{/if}}
+  </form>
+</div>
